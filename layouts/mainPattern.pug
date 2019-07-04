@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		block title
+		block link
+		//- include layouts/forIndex
+		//- - var pageName = "Главная страница";
+		//- block title 
+		//- block title
+		//- link(rel = "stylesheet" href = "css/style.css")
+	body
+		include ../includes/header.pug
+		block main
+		include ../includes/footer.pug
+		//- header
+		//- 	.logo place logo here
+		//- 	.button_container
+		//- 		.button Home
+		//- 		.button Pages
+		//- 		.button Features
+		//- 		.button Extensions
+		//- 		.button Tutorials
+		//- 		.button Contact us
+		//- main
+		//- 	.row_big(style = "background-image: url('https://zabavnik.club/wp-content/uploads/2018/05/gray_picture_3_05070303.jpg');")
+		//- 	.row_small
+		//- 	.row_small
+		//- footer
+		//- 	.footer__text @ 2016 PSDfreebies.com - All Right Reserved
+		//- 	.footer__text Design by: |img| PSDFreebies.com
+
+		//- script(src = "js/script.js")

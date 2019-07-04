@@ -1,0 +1,23 @@
+{
+  "name": "testgulp",
+  "version": "1.0.0",
+  "description": "WOOOOOOOOOOOOOW",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DEBIL",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tsc": "^1.3.2",
+    "gulp-typescript": "^5.0.1",
+    "typescript": "^3.5.2"
+  }
+}
