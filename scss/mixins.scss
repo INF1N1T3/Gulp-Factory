@@ -1,20 +1,9 @@
 
-		@mixin border($otherProperties, $values) {
-			@if variable-defined($otherProperties) {
-				border-#{$otherProperties}: $values;
-			}
-			@else {
-			border: $values;
-		}
-		}
-
-		@mixin margin($value, $where...) {
-			@if variable-defined($value) and variable-defined($where) {
-				@each $val in $where {
-					margin-#{$val}: $value;
-				} 
-			}
-			@else {
-				@warn 'NO.';
-			}
+		@mixin GoldSechenie($property, $firstOrSecond) {
+			
+				@if $firstOrSecond == true {
+					#{$property}: ((100% / 21) * 8);
+				}  @else {
+					#{$property}: ((100% / 21) * 13);
+				}
 		}

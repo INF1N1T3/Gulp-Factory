@@ -1,101 +1,42 @@
+@import "mixins";
+@import "variables";
 
-@import 'variables';
-@import 'mixins';
 * {
 	margin: 0;
 	padding: 0;
 }
 
-	@each $selector in $selectors1 {
-		#{$selector} {
-			position: relative;
-		}
-	}
-
 body {
-	background-color: $mainBGColor;
-	margin: 3%;
+	background-color: $bodyColor;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
 	font-family: sans-serif;
-	box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.73);
-	@each $selector in $selector2 {
-		#{$selector2} {
-			width: 100%;
-			height: 70px;
-			left: 0;
+	h1 {
+		align-self: center;
+		font-weight: lighter;
+		font-size: 190%;
+		padding-left: 190px;
+		&::first-letter {
+			font-size: 130%;
+			color: $firstLetterColor;
 		}
 	}
-	header {
+	div {
+		position: absolute;
+		left: 0;
 		top: 0;
-		@include border(bottom, solid #666 2px);
-		.container__header {
-			display: flex;
-			position: relative;
-			left: 0;
-			top: 0;
-			width: (100% - (9% * 2));
-			height: 100%;
-			@include margin(9%, left, right);
-				.logo {
-					@include margin(9%, right);
-					background-color: #000;
-					align-self: center;
-					justify-self: flex-start;
-					width: 65px;
-					height: 65px;
-				}
-				.linkContainer {
-					width: 50%;
-					height: 100%;
-					align-self: center;
-					justify-self: flex-start;
-					display: flex;
-					align-items: center;
-					justify-content: space-around;
-					.linkToPages {
-						position: relative;
-						display: flex;
-						align-items: center;
-						height: 100%;
-						width: ((100% - 12%) / 6);
-						.onHover {
-							display: none;
-							transition: all 0.4s;
-						}
-						&:hover .onHover {
-							position: relative;
-							display: block;
-							transition: all 0.4s;
-							width: 100%;
-							height: 7px;
-							align-self: flex-end;
-							justify-self: center;
-							background: linear-gradient(to bottom, 	rgba(0, 0, 0, 0), #0000ff);
-						}
-					}
-				}
-				.socialLinks {
-					width: 25%;
-					height: 100%;
-					align-self: center;
-					display: flex;
-					align-items: center;
-					justify-content: space-around;
-					.link {
-						float: left;
-					}
-				}
+		height: inherit;
+		@include GoldSechenie(width, true);
+		background-color: $decorColor;
+		&:hover {
+				background-color: darken($firstLetterColor, $howDarken);
 			}
 	}
-	footer {
-		display: flex;
-		bottom: 0;
-		align-items: center;
-		justify-content: space-around;
-		background-color: #333;
-		.footer__text {
-			color: #fff;
-			font-size: 0.8em;
+	@each $selector in $selectors {
+		#{$selector} {
+			transition: all 1s;
 		}
 	}
 }
-
