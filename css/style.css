@@ -18,7 +18,10 @@ body {
     align-self: center;
     font-weight: lighter;
     font-size: 190%;
-    padding-left: 190px; }
+    padding-left: 190px;
+    -webkit-transition: padding 1s;
+    -o-transition: padding 1s;
+    transition: padding 1s; }
     body h1::first-letter {
       font-size: 130%;
       color: red; }
@@ -28,16 +31,11 @@ body {
     top: 0;
     height: inherit;
     width: 38.09524%;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
     background-color: red; }
     body div:hover {
-      background-color: #d60000; }
-  body h1 {
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  body div {
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
+      background-color: #c20000; }
 
 /*# sourceMappingURL=style.css.map */
